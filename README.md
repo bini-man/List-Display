@@ -59,19 +59,18 @@ Contributions are welcome!
 This project is organized into several key directories within the `src` folder to promote maintainability and scalability. Here's a breakdown:
 
 src/
-├── components/        # Reusable React components
-│   ├── container.js       # Main container component for the product list
-│   ├── ListCard.js        # Component for displaying individual product cards
-│   ├── LoadingorError.js  # Component to handle loading and error states
-│   ├── NavigationDrawer.js # Component for the navigation drawer
-│   └── NavigationHeader.js # Component for the navigation header
-├── hooks/             # Custom React hooks
-│   └── useFetchProduct.js # Custom hook for fetching product data
-├── utils/             # Utility functions and constants
-│   └── constants.js    # Constants used throughout the application
-├── App.js             # Main application component
-├── index.js           # Entry point of the application
-└── ...                # Other files (e.g., tests, styles)
+├── components/
+│   ├── container.js
+│   ├── ListCard.js
+│   ├── LoadingorError.js
+│   ├── NavigationDrawer.js
+│   └── NavigationHeader.js
+├── hooks/
+│   └── useFetchProduct.js
+├── utils/
+│   └── constants.js
+├── App.js
+└── index.js
 
 **Key directories and files:**
 
