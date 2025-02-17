@@ -1,19 +1,37 @@
 import React from 'react';
-import useFetchProduct from './Hooks/useFetchProduct';
 import LoadingOrError from './components/LoadingOrError';
-import { Box, Typography } from '@mui/material';
+import {
+  Box,
+  Drawer,
+  AppBar,
+  Toolbar,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+  IconButton,
+  Card,
+  CardMedia,
+  CardContent,
+  CircularProgress,
+  Alert,
+} from '@mui/material';
+import useFetchProduct from './Hooks/useFetchProduct';
+import Container from './components/Container';
+
+
+
 function App() {
   const { products, isLoading,  error,  isDrawerOpen, handleDrawerOpen, handleDrawerClose } = useFetchProduct();
   if(isLoading || error) {
     return <LoadingOrError isLoading={isLoading} error={error} /> 
   }
+
   return (
     <Box sx={{ display: 'flex' }}>
-        <div>
-           {products.map(product => (
-               <Typography variant="body1" color="text.secondary">{product.title}.</Typography>
-           ))}
-        </div>
+     <Container products={products} />
     </Box>
   );
 }
