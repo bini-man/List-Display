@@ -2,24 +2,11 @@ import React from 'react';
 import LoadingOrError from './components/LoadingOrError';
 import {
   Box,
-  Drawer,
-  AppBar,
-  Toolbar,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-  IconButton,
-  Card,
-  CardMedia,
-  CardContent,
-  CircularProgress,
-  Alert,
+
 } from '@mui/material';
 import useFetchProduct from './Hooks/useFetchProduct';
 import Container from './components/Container';
+import NavigationHeader from './components/NavigationHeader';
 
 
 
@@ -31,7 +18,8 @@ function App() {
 
   return (
     <Box sx={{ display: 'flex' }}>
-     <Container products={products} />
+      <NavigationHeader isDrawerOpen={isDrawerOpen} handleDrawerOpen={handleDrawerOpen}/>
+      <Container products={products} />
     </Box>
   );
 }
